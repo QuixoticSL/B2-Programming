@@ -1,0 +1,75 @@
+string character, morseCode;
+            Console.WriteLine("Character to MorseCode Converter.");
+            Console.WriteLine("Input one character");
+            character = Console.ReadLine().ToUpper();
+ 
+            morseCode = getMorseCode(character);
+
+            Console.WriteLine(morseCode);
+            Console.ReadKey();
+        }
+        public static string getMorseCode(string character)
+        {
+
+            switch (character)
+            {
+                case "A":
+                    return ".-";
+                case "B":
+                    return "-...";
+                case "C":
+                    return "-.-.";
+                case "D":
+                    return "-..";
+                case "E":
+                    return ".";
+                case "F":
+                    return "..-.";
+                case "G":
+                    return "--.";
+                case "H":
+                    return "....";
+                case "I":
+                    return "..";
+                case "J":
+                    return ".---";
+                case "K":
+                    return "-.-";
+                case "L":
+                    return ".-..";
+                case "M":
+                    return "--";
+                case "N":
+                    return "-.";
+                case "O":
+                    return "---";
+                case "P":
+                    return ".--.";
+                case "Q":
+                    return "--.-";
+                case "R"
+                    return ".-.";
+                case "S":
+                    return "...";
+                case "T":
+                    return "-";
+                case "U":
+                    return "..-";
+                case "V":
+                    return "...-";
+                case "W":
+                    return ".--";
+                case "X":
+                    return "-..-";
+                case "Y":
+                    return "-.--";
+                case "Z":
+                    return "--..";
+                default:
+                    return "";
+            }
+
+int a = 13, b = 1; 
+int x = ( (a%b)>1) ? a : b; // If module of a%b is greater than 1 output a, if not output b
+
+
