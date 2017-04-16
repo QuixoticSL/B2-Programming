@@ -1,0 +1,10 @@
+	    // Write a program which will use WHILE and write out 12 lines of: ***
+
+            int a = 1;
+
+            while (a < 12) {
+                Console.WriteLine("***");
+                a++;
+            }
+
+            Console.ReadKey();
