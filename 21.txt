@@ -1,0 +1,14 @@
+            // Write out the multiples of the inputed number.
+
+            int a = 1;
+            int number;
+
+            Console.Write("Please enter an integer: ");
+            number = int.Parse(Console.ReadLine());
+
+            while (a <= 15) {
+                Console.WriteLine("{0}*{1}={2}", a, number, a*number);
+                a++;
+            }
+
+	    Console.ReadKey();
