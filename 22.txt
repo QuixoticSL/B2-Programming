@@ -1,0 +1,13 @@
+	    int num1, num2, num3, num4, num5, num6;
+
+            Random r = new Random();
+
+            num1 = r.Next(1, 40); 
+            num2 = r.Next(1, 40);
+            num3 = r.Next(1, 40);
+            num4 = r.Next(1, 40); 
+            num5 = r.Next(1, 40);
+            num6 = r.Next(1, 40);
+
+            Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}", num1, num2, num3, num4, num5, num6);
+	    Console.ReadKey();
