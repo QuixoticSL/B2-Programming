@@ -1,0 +1,21 @@
+//Write a program that reads 20 integers and outputs the sum of positive and sum of negative integers.
+
+            double number, sumPositive, sumNegative;
+            sumPositive = sumNegative = 0;
+            int i = 1;
+
+            do {
+                Console.Write("Please enter an integer: ");
+                number = double.Parse(Console.ReadLine());
+
+                if (number > 0){
+                    sumPositive = sumPositive + number; 
+                } else {
+                    sumNegative = sumNegative + number;
+                }
+
+            } while (++i <= 7);
+
+            Console.WriteLine("The sum of positive integers is: {0}", sumPositive);
+            Console.WriteLine("The sum of negative integers is: {0}", sumNegative);
+            Console.ReadKey();
