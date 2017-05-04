@@ -1,0 +1,17 @@
+            // A program that reads the inputed number and sees if its larger than 0.
+            // If it is smaller than 0, it prints out: "That is a negative number"
+
+            int num;
+
+            Console.Write("Please enter a whole number: ");
+            num = int.Parse(Console.ReadLine());
+
+            if (num < 0)
+            {
+                Console.WriteLine("That is a negative number.");
+            } else
+            {
+                Console.WriteLine("Thank you.");
+            }
+
+            Console.ReadKey();
