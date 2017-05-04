@@ -1,0 +1,51 @@
+
+namespace ConsoleApplication1
+{
+    class Program
+    {   // 3.5.2017 
+        // 1. Write a program that writes out the surface and volume of a rectangle.
+        // This is where you write methods
+
+        static int returnSurface(int a, int b) //Method that calculates the surface.
+        {
+            return (a * b);
+        }
+
+        static int returnVolume(int a, int b) //Method that calculates the volume.
+        {
+            return (2 * a + 2 * b);
+        }
+
+        static void Calculation(int a, int b) //This is a VOID method because it returns no value.
+        {
+            int surface = returnSurface(a, b); // Calling the returnSurface method
+            int volume = returnVolume(a, b); // Calling the returnVolume method
+
+            Console.WriteLine("The surface of your rectangle is {0}", surface);
+            Console.WriteLine("The volume of your rectangle is {0}", volume);
+
+        }
+
+
+        static void Main(string[] args) //Only use MAIN to call other methods.
+        {
+            int a, b;
+
+            Console.Write("Enter a: ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("Enter b: ");
+            b = int.Parse(Console.ReadLine());
+
+            Calculation(a, b);
+            Calculation(10, 15);
+            int volume = returnVolume(a, b); //We store the returned value in a variable, otherwise it wouldn't work.
+
+            // OR (Both of these ways are correct, tho I prefer the below one)
+
+            //We can directly call the method when we write out the solution.
+            Console.WriteLine("The volume of the rectangle is: {0}", returnVolume(a, b));
+
+            Console.ReadKey();
+        }
+    }
+}
