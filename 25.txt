@@ -1,0 +1,36 @@
+
+namespace ConsoleApplication1
+{
+    class Program
+    {   // 3.5.2017 
+        // 2. Write a method that will write and return the sum of the following:
+        // F(N) = 1 + 1 / 2 + 1 / 3 + 1 / 4 + 1 / 5 + ... + 1 / N where N is a whole number.
+        // This is where you write methods
+
+        public static double Calculation(int N) 
+        {
+            double sum = 0; // Variable that will hold values from the FOR loop.
+            for (int i = 1; i <= N; i++) { // FOR loop ends when it reaches N
+                sum = sum + (1.0 / i); // for 1.0 to exist the SUM variable has to be DOUBLE
+            }
+            return sum;
+        }
+
+        static void Main(string[] args) 
+        {
+            int n; // The variable that will hold the users inputed number.
+
+            do
+            {
+                Console.WriteLine("Enter a whole positive number: ");
+                n = int.Parse(Console.ReadLine());
+
+            } while (n < 0);
+
+            Console.WriteLine("The sum of a row of numbers for {0} is {1}", n, Calculation(n));
+            
+            Console.ReadKey();
+        }
+        
+    }
+}
