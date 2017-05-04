@@ -1,0 +1,13 @@
+            // This program prints 4
+            int i = 0;
+
+            if (i == 0)
+                i++;
+            i++;
+
+            if (i == 3)
+                i += 2;
+            i += 2;
+
+            Console.WriteLine(i);
+            Console.ReadKey();
