@@ -1,0 +1,12 @@
+            // A program that when given a lowercase letter, transforms it into an uppercase.
+            char letter;
+
+            Console.Write("Please enter a letter: ");
+            letter = (char)Console.Read(); // When parsing a character
+
+            if (letter >= 'a' && letter <= 'z')
+            {
+                Console.WriteLine("The letter {0} is a non capital letter, a capital letter would look like this {1}", letter, (char)(letter - 32));
+            }
+
+            Console.ReadKey();
