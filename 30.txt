@@ -1,0 +1,42 @@
+namespace ConsoleApplication1
+{
+    class Program
+    {   // 3.5.2017 
+        // 4. Write a method that takes an integer and writes out how many numbers the integer has.
+        // i.e. 12345 should equal 5. If the integer is negative, it should return -1 always.
+        // This is where you write methods
+
+        public static int numberOfNumbers(int num)
+        {
+            if (num < 0)
+            {
+                return -1;
+            }
+            else
+            {
+                int counter = 0;
+
+                while (num > 0)
+                {
+                    num = num / 10;
+                    counter++;
+                }
+
+                return counter;
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            for (int i = 1; i <= 5; i++ ) {
+                Console.WriteLine("Enter an integer: ");
+                int st = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Number of numbers in {0} is {1}", st, numberOfNumbers(st));
+            }
+
+            Console.ReadKey();
+        }
+        
+    }
+}
