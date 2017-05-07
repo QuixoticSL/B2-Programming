@@ -1,0 +1,15 @@
+            int num;
+
+            Console.Write("Please enter a positive integer: ");
+            num = int.Parse(Console.ReadLine());
+
+            if ((num % 2) == 0) // Do not use "/" here. Only if the remainder is 0, the integer will be even.
+            {
+                Console.WriteLine("The integer is even.");
+            } 
+            else
+            {
+                Console.WriteLine("The integer is odd.");
+            }
+
+            Console.ReadKey();
