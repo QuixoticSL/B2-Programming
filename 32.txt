@@ -1,0 +1,22 @@
+            int a, b;
+
+            Console.Write("Please enter the first positive integer: ");
+            a = int.Parse(Console.ReadLine());
+
+            Console.Write("Please enter the second positive integer: ");
+            b = int.Parse(Console.ReadLine());
+
+            if ((a*b) > (a+b))
+            {
+                Console.WriteLine("{0} * {1} = {2}", a, b, a*b);
+                Console.WriteLine("{0} + {1} = {2}", a, b, a+b);
+                Console.WriteLine("The product is greater than the sum.");
+            }
+            else
+            {
+                Console.WriteLine("{0} * {1} = {2}", a, b, a*b);
+                Console.WriteLine("{0} + {1} = {2}", a, b, a+b);
+                Console.WriteLine("The sum is greater than the sum.");
+            }
+
+            Console.ReadKey();
