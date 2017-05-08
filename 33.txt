@@ -1,0 +1,32 @@
+            int a, b, c;
+            int x, y, z;
+
+            Console.Write("Please enter first integer: ");
+            a = int.Parse(Console.ReadLine());
+
+            Console.Write("Please enter second integer: ");
+            b = int.Parse(Console.ReadLine());
+
+            Console.Write("Please enter third integer: ");
+            c = int.Parse(Console.ReadLine());
+
+            if (a < b)   // -> abc acb cab
+                if (b < c)  // -> abc
+                { x = a; y = b; z = c; }
+                else if (c < a) // acb cab -> cab
+                { x = c; y = a; z = b; }
+                else   // acb cab -> acb
+                { x = a; y = c; z = b; }
+            else    // -> bac bca cba
+                if (a < c)  // -> bac
+            { x = b; y = a; z = c; }
+            else if (b < c) // bca cba -> bca
+            { x = b; y = c; z = a; }
+            else   // bca cba -> cba
+            { x = c; y = b; z = a; }
+        
+
+        Console.WriteLine("the smallest of the numbers is: " + x);
+        Console.WriteLine("the largest of the numbers is: " + z);
+
+            Console.ReadKey();
