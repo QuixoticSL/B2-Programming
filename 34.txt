@@ -1,0 +1,8 @@
+            int i = 11;
+
+            do
+            {
+                Console.WriteLine(++i - 11);
+            } while (i < 21);
+
+            Console.ReadKey();
