@@ -1,0 +1,29 @@
+            // Declaration of integers for use
+            
+            int countedWords = 0;
+            int lowerCase = 0;
+            int upperCase = 0;
+
+            // Actual program
+
+            Console.Write("Please enter a string of letters: \n");
+            string letters = Console.ReadLine(); // the string which will hold the inputed letters
+
+            countedWords = letters.Split(' ').Length; // counts the words in string, splits them with whitespace
+            Console.Write("WORDCOUNT IS: {0} \n", letters);
+
+            foreach (char c in letters) // declaring a character c to check for upper and lowercase letters
+            {
+                if (char.IsUpper(c)) // if c is uppercase
+                {
+                    upperCase++; // increment upper case letter variable
+                } else if (!char.IsPunctuation(c) && !char.IsWhiteSpace(c))
+                { // if c is not a punctuation or whitespace, it must be a lower case letter
+                    lowerCase++; // so we increment lower case variable
+                }
+            }
+
+            Console.WriteLine("Number of letters: \n" + countedWords);
+            Console.WriteLine("Number of Upper Case letters: \n" + upperCase);
+            Console.WriteLine("Number of Lower Case letters: \n" + lowerCase);
+            Console.ReadKey();
