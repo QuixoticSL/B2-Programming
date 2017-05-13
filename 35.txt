@@ -1,0 +1,19 @@
+            int st, i = 0, sum = 0;
+            double avg;
+
+            Console.Write("Input 10 numbers: \n");
+
+            do
+            {
+                Console.WriteLine("Input number {0}: ", i);
+                st = Convert.ToInt32(Console.ReadLine());
+                sum += st;
+                ++i;
+
+            } while (i < 10);
+
+            avg = sum / 10.0;
+
+            Console.Write("The sum of 10 numbers is : {0}\nThe Average is :{1}\n", sum, avg);
+
+            Console.ReadKey();
