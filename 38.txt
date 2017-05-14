@@ -1,0 +1,34 @@
+            // Declaration of variables
+            int other = 0;
+            int sumUpper = 0;
+            int sumLower = 0;
+            int i = 1;
+
+            // Getting letters from user
+            Console.WriteLine("Sum of upper case and lower case characters with do-while loop. \n");
+
+            do
+            {
+                Console.WriteLine("Please enter {0} letter (lower or uppercase): ", i);
+                char character = char.Parse(Console.ReadLine());
+
+                i++;
+
+                if (char.IsUpper(character)) // If inputed letter is upper case
+                {
+                    sumUpper++;
+                } else if(char.IsLower(character))
+                {
+                    sumLower++; // Else give it to lower case
+                } else
+                {
+                    other = 20 - (sumUpper + sumLower);
+                }
+
+            } while (i <= 10);
+
+            // Writing out results
+            Console.WriteLine("Sum of upper case letters is: {0}", sumUpper);
+            Console.WriteLine("Sum of lower case letters is: {0}", sumLower);
+            Console.WriteLine("The number of the rest of the characters is: {0}", other);
+            Console.ReadKey();
