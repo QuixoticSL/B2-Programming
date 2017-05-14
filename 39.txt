@@ -1,0 +1,31 @@
+            //Declaration of variables
+            int userGuess;
+            int guessCounter = 0;
+
+            //Random number generation
+            Random r = new Random();
+            int result = r.Next(100);
+
+            //Prompting users for input
+            Console.WriteLine("Try to guess a number between 1 and 100 \n");
+
+            do
+            {
+                Console.WriteLine("Please enter a number between 1 and 100:");
+                userGuess = int.Parse(Console.ReadLine());
+
+                guessCounter++;
+
+                if (userGuess < result)
+                {
+                    Console.WriteLine("The number is smaller.");
+                } else 
+                {
+                    if (userGuess > result)
+                        Console.WriteLine("The number is larger.");
+                }
+            } while (userGuess != result);
+
+            //Write out the results
+            Console.WriteLine("Congratulations! You guessed the number in " + guessCounter + "guesses!");
+            Console.ReadKey();
