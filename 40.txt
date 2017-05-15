@@ -1,0 +1,12 @@
+            //Declaration of variables
+
+            //Random number generator
+            Random r = new Random();
+
+            //Loop
+            for (int i = 0; i < 101; i++)
+            {
+                int ran = r.Next(1, 101);
+            }
+
+            Console.ReadKey();
