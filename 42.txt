@@ -1,0 +1,25 @@
+            //Prompt user for input
+            Console.WriteLine("Please enter several integers: ");
+            string input = Console.ReadLine();
+            string[] splittedLine = input.Split(' ');
+
+            //Variable declaration
+            int maxValue = Int32.MinValue; // Initialize the maximum number to the minimum possible values
+            int minValue = Int32.MaxValue; // Initialize the minimum number to the maximum possible values
+
+            //Loop
+            foreach (string number in splittedLine)
+            {
+                int currentNumber = int.Parse(number); // convert the current string element 
+                                                       // to an integer so we can do comparisons
+
+                if (currentNumber > maxValue)  // Check if it's greater than the last max number
+                    maxValue = currentNumber;  // if so, the maximum is the current number
+
+                if (currentNumber < minValue)  // Check if it's lower than the last min number
+                    minValue = currentNumber;  // if so, the minium is the current number
+            }
+
+            //Print out results
+            Console.WriteLine("The max number is {0} and the min number is {1}.", maxValue, minValue);
+            Console.ReadKey();
