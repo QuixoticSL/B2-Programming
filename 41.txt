@@ -1,0 +1,27 @@
+            //Variable declaration
+            int poz = 0;
+            int neg = 0;
+            int nothing = 0;
+
+            //Random generation of numbers and loop
+            for (int i = 0; i < 1001; i++)
+            {
+                Random r = new Random();
+                int ran = r.Next(-1000, 1001);
+
+                if (ran > 0)
+                {
+                    poz++;
+                } else if (ran < 0)
+                {
+                    neg++;
+                } else
+                {
+                    nothing++;
+                }
+            }
+
+            //Write out results
+            Console.WriteLine("Number of positive numbers is {0}", poz);
+            Console.WriteLine("Number of negative numbers is {0}", neg);
+            Console.ReadKey();
