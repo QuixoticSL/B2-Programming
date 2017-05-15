@@ -1,0 +1,18 @@
+            //Declaration of variables
+            int num;
+            int sum = 0;
+
+            //Prompt user for input
+            Console.Write("Please enter an integer: ");
+            num = int.Parse(Console.ReadLine());
+
+            //Loop
+            while (num != 0)
+            {
+                sum += num % 10;
+                num /= 10;
+            }
+
+            //Print out results
+            Console.WriteLine(sum);
+            Console.ReadKey();
