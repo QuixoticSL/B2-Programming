@@ -1,0 +1,29 @@
+
+	    int[] numbers = new int[15]; int biggest;
+
+            for (int i = 0; i < numbers.Length; i++ ) {
+                do{
+                    Console.Write("Please enter ({0}). Število: ", i+1); // Increments which number we need to enter.
+                    numbers[i] = int.Parse(Console.ReadLine());
+                } while (numbers[i] < 0);
+            }
+
+            // biggest = numbers[0];  Searching for biggest entered number.
+            biggest = 0;
+            for (int i = 1; i < numbers.Length; i++) { // For biggest number i=1
+                if ((numbers[i] > biggest) && (numbers[i]%2 == 0)) {
+                    biggest = numbers[i];
+                }
+            }
+
+            if (biggest == 0)
+            {
+                Console.WriteLine("V polju ni sodih elementov!");
+            }
+            else {
+                Console.WriteLine("Biggest element is: {0}", biggest);
+            }
+
+            // Console.Write("The biggest element of numbers is: {0}", biggest); Searching for biggest entered number.
+
+            Console.ReadKey();
