@@ -1,0 +1,14 @@
+
+        public static double Calculation(double celsius) {
+            return celsius + 273.15;
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\t°C\t|\t°K\t");
+            Console.WriteLine("-----------------------------------");
+            for (int i = -100; i <= 100; i += 10) {
+                Console.WriteLine("\t{0}\t|\t{1}\t", i, Calculation(i));
+            }
+            Console.ReadKey();
+        }
