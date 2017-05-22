@@ -1,0 +1,26 @@
+        public static double Avg(int[] numbers) {
+            double sum;
+            sum = 0;
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                sum += numbers[i];
+            }
+
+            return sum / numbers.Length;
+        }
+
+        static void Main(string[] args)
+        {
+            int [] grades = new int[7];
+
+            for (int i = 0; i < grades.Length; i++) {
+                do
+                {
+                    Console.Write("Please enter ({0}). grade: ", i + 1);
+                    grades[i] = int.Parse(Console.ReadLine());
+                } while (grades[i] < 0);
+            }
+
+            Console.Write("Average of grades is {0}", Avg(grades));
+            Console.ReadKey();
