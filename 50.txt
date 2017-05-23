@@ -1,0 +1,31 @@
+
+        public static int Max(int[] p) {
+
+            int biggest = p[0], indeks = 0;
+
+            for (int i = 1; i < p.Length; i++)
+            { // For biggest number i=1
+                if (p[i] > biggest)
+                {
+                    biggest = p[i];
+		    indeks = i;
+                }
+            }
+
+            return indeks + 1;
+        }
+
+        static void Main(string[] args)
+        {
+            int[] numbers = new int[5]; int biggest;
+
+            for (int i = 0; i < numbers.Length; i++ ) {
+                do{
+                    Console.Write("Please enter ({0}). number: ", i+1); // Increments which number we need to enter.
+                    numbers[i] = int.Parse(Console.ReadLine());
+                } while (numbers[i] < 0);
+            }
+
+                Console.WriteLine("Biggest element is: {0}", Max(numbers));
+
+            Console.ReadKey();
